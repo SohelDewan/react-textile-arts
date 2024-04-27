@@ -1,0 +1,81 @@
+[
+    {
+      "image": "https://i.ibb.co/c8zPWCq/Beadwork.jpg",
+      "estate_title": "Luxury Villa with Ocean View",
+      "id": "1",
+      "segment_name": "Residential",
+      "description": "Stunning 4-bedroom villa overlooking the azure waters. Modern design, spacious rooms, and private beach access.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "3,500 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "view_property_button": "View Property"
+    },
+    {
+      "image": "https://i.ibb.co/TMX20Yc/Embroidery.jpg",
+      "estate_title": "Penthouse in the Sky",
+      "id": "2",
+      "segment_name": "Luxury",
+      "description": "Elegance meets sophistication in this 3-bedroom penthouse. Floor-to-ceiling windows, rooftop terrace, and concierge service.",
+      "price": "$4,800,000",
+      "status": "sale",
+      "area": "2,200 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["living room", "gym", "rooftop terrace"],
+      "view_property_button": "View Property"
+    },
+    {
+      "image": "https://i.ibb.co/VYWFRzB/Knitting-Crocheting.jpg",
+      "estate_title": "Lakefront Retreat",
+      "id": "3",
+      "segment_name": "Vacation",
+      "description": "Charming 2-bedroom cottage nestled by the lake. Rustic interiors, private dock, and breathtaking sunsets.",
+      "price": "$650,000",
+      "status": "sale",
+      "area": "1,000 sq ft",
+      "location": "Lake Tahoe, Nevada",
+      "facilities": ["living room", "fireplace", "private dock"],
+      "view_property_button": "View Property"
+    },
+    {
+        "image": "https://i.ibb.co/85L4zKd/Macrame.jpg" ,
+        "estate_title": "Seaside Bungalow",
+        "id": "4",
+        "segment_name": "Beachfront",
+        "description": "Cozy 1-bedroom bungalow steps away from the sandy shore. Ocean views, hammock, and sea breeze.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "800 sq ft",
+        "location": "Maui, Hawaii",
+        "facilities": ["living room", "hammock", "ocean view"],
+        "view_property_button": "View Property"
+      },
+      {
+        "image": "https://i.ibb.co/ccL9Cy6/Quilting.jpg",
+        "estate_title": "Historic Mansion",
+        "id": "5",
+        "segment_name": "Heritage",
+        "description": "Grand 6-bedroom mansion with ornate architecture. Ballroom, library, and sprawling gardens.",
+        "price": "$6,200,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "London, United Kingdom",
+        "facilities": ["living room", "ballroom", "library"],
+        "view_property_button": "View Property"
+      },
+      {
+        "image": "https://i.ibb.co/s5P5B1H/Tie-Dyeing.jpg",
+        "estate_title": "Mountain Retreat",
+        "id": "6",
+        "segment_name": "Scenic",
+        "description": "Rustic log cabin nestled in the alpine forest. Fireplace, hot tub, and panoramic mountain views.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1,500 sq ft",
+        "location": "Aspen, Colorado",
+        "facilities": ["living room", "fireplace", "hot tub"],
+        "view_property_button": "View Property"
+      }
+  ]
+  
