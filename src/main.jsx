@@ -13,11 +13,11 @@ import NotFound from './components/NotFound';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import UpdateProfile from './components/UpdateProfile';
 import EstateSectionPage from './components/EstateSectionPage';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import ViewEstateDetails from './components/ViewEstateDetails';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import ViewEstateDetails from './components/ViewEstateDetails';
 import AddCraft from './components/AddCraft';
 import MyArtCraft from './components/MyArtCraft';
-import ProductDetails from './components/ProductDetails';
+// import ProductDetails from './components/ProductDetails';
 import UpdateCraft from './components/UpdateCraft';
 
 const router = createBrowserRouter([
@@ -31,16 +31,16 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: ()=> fetch('http://localhost:5000/craft'),    
       },
-      {
-        path: "/view-property",
-        element: <ViewEstateDetails />,
-        loader: ()=> fetch('/data.json')
-      },
-      {
-        path: '/estate/:id',
-        element: <PrivateRoute><ProductDetails /></PrivateRoute>,
-        loader: ()=> fetch('/data.json')
-      },
+      // {
+      //   path: "/view-property",
+      //   element: <ViewEstateDetails />,
+      //   loader: ()=> fetch('/data.json')
+      // },
+      // {
+      //   path: '/estate/:id',
+      //   element: <PrivateRoute><ProductDetails /></PrivateRoute>,
+      //   loader: ()=> fetch('/data.json')
+      // },
       {
         path: "/login",
         element: <Login />,

@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const CraftCard = ({craft}) => {
+const CraftCard = ({craft, crafts, setCrafts}) => {
 
     const {
+        _id,
         itemname,
         Subcategory_Name,
         short_description,
@@ -15,6 +17,42 @@ const CraftCard = ({craft}) => {
         // User_Name,
         photo,
       } = craft;
+
+      const handleDelete = (_id) => {
+        console.log(_id);
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            
+            fetch(`http://localhost:5000/craft/${_id}`,{
+                method: 'DELETE'
+            })
+              .then(res => res.json())
+              .then((data) => {
+                console.log(data);
+                if(data.deletedCount > 0) {
+                    Swal.fire(
+                        "Deleted!",
+                        "Your file has been deleted.",
+                         "success"
+                      );
+                    {
+                      // eslint-disable-next-line react/prop-types
+                      const remaining = crafts.filter(crf=> crf._id !==_id);
+                      setCrafts(remaining);
+                    }
+                }
+              });
+          }
+        });
+      };
     return (
         <div className="card card-side bg-base-100 shadow-xl">
       <figure>
@@ -41,7 +79,7 @@ const CraftCard = ({craft}) => {
           </button>
         </Link>
           <button
-            // onClick={() => handleDelete(_id)}
+            onClick={() => handleDelete(_id)}
             className="btn join-item bg-red-600 text-white"
           >
             X
