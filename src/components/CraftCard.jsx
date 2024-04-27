@@ -30,7 +30,7 @@ const CraftCard = ({craft}) => {
           <p>{processing_time}</p>
         </div>
         <div className="join join-vertical space-y-2 pt-3 pr-1 lg:pt-2 ">
-          <button className="btn join-item bg-green-600 text-white">
+          <button className="btn join-item bg-[#1A4D2E] text-white">
             View
           </button>
         <Link
