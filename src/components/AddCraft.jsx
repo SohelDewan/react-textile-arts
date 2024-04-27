@@ -1,4 +1,4 @@
-
+import Swal from "sweetalert2";
 const AddCraft = () => {
   const handleAddCraft = (e) => {
     e.preventDefault();
@@ -38,6 +38,14 @@ const AddCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.insertedId > 0) {
+          Swal.fire({
+              title: "Success!",
+              text: "Your file has been added.",
+              icon: "success",
+              confirmButtonText:'Added'
+            });       
+      }
       });
   };
   return (
