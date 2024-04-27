@@ -1,29 +1,31 @@
-// import Navbar from "./Navbar";
 import { useLoaderData } from "react-router-dom";
 import Slider from "../Slider";
-import EstateSection from "./EstateSection";
+import CraftCard from "./CraftCard";
+import { useState } from "react";
 
 const Home = () => {
+  const crafts = useLoaderData();
+  const [craft, setCraft] = useState();
 
-    const estates = useLoaderData();
-    // console.log(estates)
+  return (
+    <div>
+      <Slider></Slider>
+      <h2 className="text-center text-5xl mt-8">
+        Collection of Textile Arts and Crafts:{craft.length}
+      </h2>
 
-    return (
-        <div>
-            {/* <Navbar></Navbar> */}
-            <Slider></Slider>
-            {/* <EstateSection></EstateSection> */}
-            <div className="grid p-5 md:grid-cols-3 container mx-auto my-8 gap-4">
-
-            {
-                estates.map(est => <EstateSection
-                            key={est.id}
-                            estates={est}
-                        ></EstateSection>)
-                    }
-            </div>
-        </div>
-    );
+      <div className="grid md:grid-cols-2 gap-4">
+        {crafts.map((craft) => (
+          <CraftCard
+            key={craft._id}
+            craft={craft}
+            crafts={craft}
+            setCraft={setCraft}
+          ></CraftCard>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Home;

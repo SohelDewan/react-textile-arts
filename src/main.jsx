@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/data.json'),    
+        loader: ()=> fetch('http://localhost:5000/craft'),    
       },
       {
         path: "/view-property",
