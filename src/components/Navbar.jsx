@@ -23,9 +23,9 @@ const Navbar = () => {
       <li className="md:mr-3">
         <NavLink to="/add-craft">Add Craft</NavLink>
       </li>
-      <li className="md:mr-3">
+      {/* <li className="md:mr-3">
         <NavLink to="/update-craft">Update Craft</NavLink>
-      </li>
+      </li> */}
       <li className="md:mr-3">
         <NavLink to="/myart-craft">My Art&Craft</NavLink>
       </li>
