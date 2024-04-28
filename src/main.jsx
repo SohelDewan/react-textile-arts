@@ -12,13 +12,12 @@ import Register from './components/Register';
 import NotFound from './components/NotFound';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import UpdateProfile from './components/UpdateProfile';
-import EstateSectionPage from './components/EstateSectionPage';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 // import ViewEstateDetails from './components/ViewEstateDetails';
 import AddCraft from './components/AddCraft';
 import MyArtCraft from './components/MyArtCraft';
-// import ProductDetails from './components/ProductDetails';
 import UpdateCraft from './components/UpdateCraft';
+import AllCart from './components/AllCart';
 
 const router = createBrowserRouter([
   {
@@ -51,8 +50,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/art-section-page",
-        element: <EstateSectionPage />,
-        loader: ()=> fetch('/data.json') 
+        element: <AllCart />,
+        loader: ()=> fetch('http://localhost:5000/craft'), 
       },
       {
         path:'/add-craft',

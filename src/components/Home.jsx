@@ -8,10 +8,10 @@ const Home = () => {
   const [crafts, setCrafts] = useState(loadedCrafts);
 
   return (
-    <div>
+    <div className="bg-[#F5EFE6]">
       <Slider></Slider>
-      <h2 className="text-center text-5xl my-12">
-        Collection of Textile Arts and Crafts:{crafts.length}
+      <h2 className="text-center text-2xl md:text-5xl my-12">
+        Collection of Textile Arts and Crafts
       </h2>
 
       <div className="grid md:grid-cols-2 gap-4 p-4">

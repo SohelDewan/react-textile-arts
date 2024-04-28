@@ -2,61 +2,55 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CraftCard = ({craft, crafts, setCrafts}) => {
+const CraftCard = ({ craft, crafts, setCrafts }) => {
+  const {
+    _id,
+    itemname,
+    Subcategory_Name,
+    short_description,
+    price,
+    customization,
+    processing_time,
+    photo,
+    stockStatus,
+    User_Name,
+    User_Email,
+  } = craft;
 
-    const {
-        _id,
-        itemname,
-        Subcategory_Name,
-        short_description,
-        price,
-        customization,
-        processing_time,
-        photo,
-        stockStatus,
-        User_Name,
-        User_Email
-      } = craft;
-
-      const handleDelete = (_id) => {
-        console.log(_id);
-        Swal.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            
-            fetch(`http://localhost:5000/craft/${_id}`,{
-                method: 'DELETE'
-            })
-              .then(res => res.json())
-              .then((data) => {
-                console.log(data);
-                if(data.deletedCount > 0) {
-                    Swal.fire(
-                        "Deleted!",
-                        "Your file has been deleted.",
-                         "success"
-                      );
-                    {
-                      // eslint-disable-next-line react/prop-types
-                      const remaining = crafts.filter(crf=> crf._id !==_id);
-                      setCrafts(remaining);
-                    }
-                }
-              });
-          }
-        });
-      };
-    return (
-        <div className="card card-side bg-base-100 shadow-xl">
-      <figure>
-        <img src={photo} />
+  const handleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/craft/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              {
+                // eslint-disable-next-line react/prop-types
+                const remaining = crafts.filter((crf) => crf._id !== _id);
+                setCrafts(remaining);
+              }
+            }
+          });
+      }
+    });
+  };
+  return (
+    <div className="card card-side bg-base-100 shadow-xl">
+      <figure >
+        <img className="rounded-xl" src={photo} />
       </figure>
       <div className="flex justify-between w-full lg:px-4">
         <div className="lg:ml-3 p-2 lg:p-4">
@@ -70,17 +64,15 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
           <p>{User_Name}</p>
           <p>{User_Email}</p>
         </div>
-        <div className="join join-vertical space-y-2 pt-3 pr-1 lg:pt-2 ">
+        <div className="join join-vertical space-y-2 pt-8 pr-1 lg:pt-10 ">
           <button className="btn join-item bg-[#1A4D2E] text-white">
             View
           </button>
-        <Link
-         to={`update-craft/${_id}`}
-         >
-        <button className="btn w-20 join-item bg-purple-600 text-white">
-            Edit
-          </button>
-        </Link>
+          <Link to={`update-craft/${_id}`}>
+            <button className="btn w-20 join-item bg-purple-600 text-white">
+              Edit
+            </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className="btn join-item bg-red-600 text-white"
@@ -90,7 +82,7 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default CraftCard;
