@@ -48,9 +48,9 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
     });
   };
   return (
-    <div className="card card-side bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl">
       <figure >
-        <img className="rounded-xl" src={photo} />
+        <img className="rounded-xl h-[50vh]" src={photo} />
       </figure>
       <div className="flex justify-between w-full lg:px-4">
         <div className="lg:ml-3 p-2 lg:p-4">
@@ -65,20 +65,20 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
           <p>{User_Email}</p>
         </div>
         <div className="join join-vertical space-y-2 pt-8 pr-1 lg:pt-10 ">
-        <Link to={`/estate/${_id}`}>
+        <Link to={`/craft/${_id}`}>
 
-          <button className="btn join-item bg-[#1A4D2E] text-white">
+          <button className="btn w-20 join-item bg-[#1A4D2E] text-white">
             View
           </button>
         </Link>
           <Link to={`/update-craft/${_id}`}>
-            <button className="btn w-20 join-item bg-purple-600 text-white">
+            <button className="btn w-20 join-item bg-[#4F6F52] text-white">
               Edit
             </button>
           </Link>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn join-item bg-red-600 text-white"
+            className="btn w-20 join-item bg-[#E8DFCA] text-white"
           >
             X
           </button>

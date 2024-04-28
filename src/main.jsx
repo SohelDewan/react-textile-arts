@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         loader: ()=> fetch('/data.json')
       },
       {
-        path: '/estate/:_id',
+        path: '/craft/:_id',
         element: <PrivateRoute><ProductDetails /></PrivateRoute>,
         loader: ()=> fetch('http://localhost:5000/craft')
       },
