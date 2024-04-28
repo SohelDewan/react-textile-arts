@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Estate from "./ProductDetails";
 
 
-const ViewEstateDetails = () => {
+const ViewDetails = () => {
 
     const data = useLoaderData();
     console.log(data);
@@ -16,4 +16,4 @@ const ViewEstateDetails = () => {
     );
 };
 
-export default ViewEstateDetails;
+export default ViewDetails;

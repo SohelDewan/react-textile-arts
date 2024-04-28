@@ -57,12 +57,12 @@ const UpdateCraft = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            if(data.insertedId > 0) {
+            if(data.modifiedCount > 0) {
               Swal.fire({
                   title: "Success!",
-                  text: "Your file has been added.",
+                  text: "Your file has been updated.",
                   icon: "success",
-                  confirmButtonText:'Added'
+                  confirmButtonText:'Updated'
                 });       
           }
         });

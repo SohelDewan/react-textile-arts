@@ -1,11 +1,7 @@
 import Swal from "sweetalert2";
 
-
 const AddCraft = () => {
-
-
   const handleAddCraft = (e) => {
-    
     e.preventDefault();
     const form = e.target;
     const itemname = form.itemName.value;
@@ -43,23 +39,22 @@ const AddCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.insertedId > 0) {
+        if (data.insertedId > 0) {
           Swal.fire({
-              title: "Success!",
-              text: "Your file has been added.",
-              icon: "success",
-              confirmButtonText:'Added'
-            });       
-      }
+            title: "Success!",
+            text: "Your file has been added.",
+            icon: "success",
+            confirmButtonText: "Added",
+          });
+        }
       });
   };
-  
+
   return (
     <div className="text-center bg-[#F4F3F0] p-4 lg:p-16">
       <h2 className=" font-bold md:text-5xl mb-2">Add Craft </h2>
 
       <form onSubmit={handleAddCraft}>
-
         <div className="md:flex gap-5 p-4 ">
           <div className="form-control flex  gap-2 lg:w-1/2 mb-3">
             <label className=" text-start">Item Name:</label>
@@ -165,7 +160,11 @@ const AddCraft = () => {
             />
           </div>
         </div>
-        <input type="submit" value="ADD" className="btn btn-block bg-[#1A4D2E] text-white" />
+        <input
+          type="submit"
+          value="ADD"
+          className="btn btn-block bg-[#1A4D2E] text-white"
+        />
       </form>
     </div>
   );

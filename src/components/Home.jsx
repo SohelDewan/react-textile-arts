@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "../Slider";
 import CraftCard from "./CraftCard";
 import { useState } from "react";
+import SubCatogery from './SubCatogery'
 
 const Home = () => {
   const loadedCrafts = useLoaderData();
@@ -24,6 +25,7 @@ const Home = () => {
           ></CraftCard>
         ))}
       </div>
+      <SubCatogery></SubCatogery>
     </div>
   );
 };
