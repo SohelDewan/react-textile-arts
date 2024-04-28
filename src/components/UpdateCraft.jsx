@@ -47,7 +47,7 @@ const UpdateCraft = () => {
         console.log(updatedCraft);
         form.reset();
         // to send data to the server
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://b9-assaignment10-server-8s0z516ui.vercel.app/craft/${_id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

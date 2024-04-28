@@ -29,7 +29,7 @@ const AddCraft = () => {
     console.log(newCraft);
     form.reset();
     // to send data to the server
-    fetch("http://localhost:5000/craft", {
+    fetch("https://b9-assaignment10-server-8s0z516ui.vercel.app/craft", {
       method: "POST",
       headers: {
         "content-type": "application/json",

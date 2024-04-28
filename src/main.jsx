@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/craft'),    
+        loader: ()=> fetch('https://b9-assaignment10-server-8s0z516ui.vercel.app/craft'),    
       },
       {
         path: "/view-property",
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/craft/:_id',
         element: <PrivateRoute><ProductDetails /></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/craft')
+        loader: ()=> fetch('https://b9-assaignment10-server-8s0z516ui.vercel.app/craft')
       },
       {
         path: "/login",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: "/art-section-page",
         element: <AllCart />,
-        loader: ()=> fetch('http://localhost:5000/craft'), 
+        loader: ()=> fetch('https://b9-assaignment10-server-8s0z516ui.vercel.app/craft'), 
       },
       {
         path:'/add-craft',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path:'/update-craft/:id',
         element:<UpdateCraft></UpdateCraft>,
-        loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+        loader: ({params})=> fetch(`https://b9-assaignment10-server-8s0z516ui.vercel.app/craft/${params.id}`)
       },
       {
         path:'/myart-craft',
