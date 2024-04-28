@@ -12,10 +12,10 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
         price,
         customization,
         processing_time,
-        // stockStatus,
-        // User_Email,
-        // User_Name,
         photo,
+        stockStatus,
+        User_Name,
+        User_Email
       } = craft;
 
       const handleDelete = (_id) => {
@@ -66,13 +66,16 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
           <p>{price}</p>
           <p>{customization}</p>
           <p>{processing_time}</p>
+          <p>{stockStatus}</p>
+          <p>{User_Name}</p>
+          <p>{User_Email}</p>
         </div>
         <div className="join join-vertical space-y-2 pt-3 pr-1 lg:pt-2 ">
           <button className="btn join-item bg-[#1A4D2E] text-white">
             View
           </button>
         <Link
-        //  to={`updateCoffee/${_id}`}
+         to={`update-craft/${_id}`}
          >
         <button className="btn w-20 join-item bg-purple-600 text-white">
             Edit
