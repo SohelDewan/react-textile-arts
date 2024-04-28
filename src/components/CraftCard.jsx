@@ -65,9 +65,12 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
           <p>{User_Email}</p>
         </div>
         <div className="join join-vertical space-y-2 pt-8 pr-1 lg:pt-10 ">
+        <Link to={`/estate/${_id}`}>
+
           <button className="btn join-item bg-[#1A4D2E] text-white">
             View
           </button>
+        </Link>
           <Link to={`/update-craft/${_id}`}>
             <button className="btn w-20 join-item bg-purple-600 text-white">
               Edit

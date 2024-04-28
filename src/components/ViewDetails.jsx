@@ -10,7 +10,7 @@ const ViewDetails = () => {
     return (
         <div className="container mx-auto">
             {
-                data.map(est => <Estate key={est.id} data={est}></Estate>)
+                data.map(est => <Estate key={est._id} data={est}></Estate>)
             }
         </div>
     );
