@@ -73,12 +73,12 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
         </Link>
           <Link to={`/update-craft/${_id}`}>
             <button className="btn w-20 join-item bg-[#4F6F52] text-white">
-              Edit
+              Update
             </button>
           </Link>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn w-20 join-item bg-[#E8DFCA] text-white"
+            className="btn w-20 join-item bg-[#E8DFCA] text-[#1A4D2E]"
           >
             X
           </button>

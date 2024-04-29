@@ -33,7 +33,7 @@ const Navbar = () => {
         <NavLink to="/register">Register</NavLink>
       </li>
       <li className="md:mr-3">
-        <NavLink to="/art-section-page">All Art & craft</NavLink>
+        <NavLink to="/art-section-page">My Art&Craft</NavLink>
       </li>
       <li className="md:mr-3">
         <NavLink to="/add-craft">Add Craft</NavLink>
@@ -42,7 +42,7 @@ const Navbar = () => {
         <NavLink to="/update-craft">Update Craft</NavLink>
       </li> */}
       <li className="md:mr-3">
-        <NavLink to="/myart-craft">My Art&Craft</NavLink>
+        <NavLink to="/myart-craft">All Art & craft</NavLink>
       </li>
       <li className="md:mr-3">
         <NavLink to="/update-profile">Update Profile</NavLink>
@@ -51,7 +51,7 @@ const Navbar = () => {
   );
 
   return (
-    <div id="art-section-full" className="navbar bg-[#E8DFCA]">
+    <div id="art-section-full" className="navbar bg-[#E8DFCA] sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn lg:hidden">
