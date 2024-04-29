@@ -3,6 +3,7 @@ import Slider from "../Slider";
 import CraftCard from "./CraftCard";
 import { useState } from "react";
 import SubCatogery from './SubCatogery'
+import ArtCraftCategories from "./ArtCraftCategories";
 
 const Home = () => {
   const loadedCrafts = useLoaderData();
@@ -25,7 +26,9 @@ const Home = () => {
           ></CraftCard>
         ))}
       </div>
+      <ArtCraftCategories></ArtCraftCategories>
       <SubCatogery></SubCatogery>
+      
     </div>
   );
 };

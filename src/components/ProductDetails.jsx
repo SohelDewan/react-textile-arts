@@ -9,7 +9,7 @@ const ProductDetails = () => {
     <>
       <div className="container mx-auto animate__animated animate__backInDown">
         <h2 className="text-5xl my-5 ">Product Name: {singleCraft.itemname}</h2>
-        <div className="flex">
+        <div className=" md:flex ">
             <img className="w-3/5 h-[80vh] rounded-lg mb-5" src={singleCraft.photo} />
             <div className="w-2/5 h-[80vh] bg-[#F5EFE6] p-4">
               <div className="ml-5 p-5 rounded-xl space-y-8 ">
